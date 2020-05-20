@@ -351,11 +351,12 @@ func (p *MediaPlaylist) Remove() (err error) {
 
 // Append general chunk to the tail of chunk slice for a media playlist.
 // This operation does reset playlist cache.
-func (p *MediaPlaylist) Append(uri string, duration float64, title string) error {
+func (p *MediaPlaylist) Append(uri string, duration float64, title string, discontinuity bool) error {
 	seg := new(MediaSegment)
 	seg.URI = uri
 	seg.Duration = duration
 	seg.Title = title
+	seg.Discontinuity = discontinuity
 	return p.AppendSegment(seg)
 }
 
@@ -383,11 +384,11 @@ func (p *MediaPlaylist) AppendSegment(seg *MediaSegment) error {
 // the head of chunk slice and move pointer to next chunk. Secondly it
 // appends one chunk to the tail of chunk slice. Useful for sliding
 // playlists.  This operation does reset cache.
-func (p *MediaPlaylist) Slide(uri string, duration float64, title string) {
+func (p *MediaPlaylist) Slide(uri string, duration float64, title string, discontinuity bool) {
 	if !p.Closed && p.count >= p.winsize {
 		p.Remove()
 	}
-	p.Append(uri, duration, title)
+	p.Append(uri, duration, title, discontinuity)
 }
 
 // ResetCache resets playlist cache. Next called Encode() will
