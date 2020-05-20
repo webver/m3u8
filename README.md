@@ -23,17 +23,17 @@ See the list of the library authors at [AUTHORS](AUTHORS) file.
 Install
 -------
 
-	go get github.com/grafov/m3u8
+	go get github.com/webver/m3u8
 
-or get releases from https://github.com/grafov/m3u8/releases
+or get releases from https://github.com/webver/m3u8/releases
 
-Documentation [![Go Walker](http://gowalker.org/api/v1/badge)](http://gowalker.org/github.com/grafov/m3u8) [![GoDoc](https://godoc.org/github.com/grafov/m3u8?status.svg)](https://godoc.org/github.com/grafov/m3u8)
+Documentation [![Go Walker](http://gowalker.org/api/v1/badge)](http://gowalker.org/github.com/webver/m3u8) [![GoDoc](https://godoc.org/github.com/webver/m3u8?status.svg)](https://godoc.org/github.com/webver/m3u8)
 -------------
 
 Package online documentation (examples included) available at:
 
-* http://gowalker.org/github.com/grafov/m3u8
-* http://godoc.org/github.com/grafov/m3u8
+* http://gowalker.org/github.com/webver/m3u8
+* http://godoc.org/github.com/webver/m3u8
 
 Supported by the HLS protocol tags and their library support explained in [M3U8 cheatsheet](M3U8.md).
 
@@ -123,7 +123,7 @@ Project status [![Go Report Card](https://goreportcard.com/badge/grafov/m3u8)](h
 
 [![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/grafov/m3u8/?ref=repository-badge)
 
-Code coverage: https://gocover.io/github.com/grafov/m3u8
+Code coverage: https://gocover.io/github.com/webver/m3u8
 
 Project maintainers:
 
