@@ -340,10 +340,14 @@ func (p *MediaPlaylist) Remove() (err error) {
 	if p.count == 0 {
 		return errors.New("playlist is empty")
 	}
+	curSegment := p.Segments[p.head]
 	p.head = (p.head + 1) % p.capacity
 	p.count--
 	if !p.Closed {
 		p.SeqNo++
+		if curSegment.Discontinuity == true {
+			p.DiscontinuitySeq++
+		}
 	}
 	p.buf.Reset()
 	return nil
